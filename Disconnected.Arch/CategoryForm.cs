@@ -23,15 +23,13 @@ namespace Disconnected.Arch
         private void CategoryForm_Load(object sender, EventArgs e)
         {
             GetCategories();
-
         }
-
 
         private void GetCategories()
         {
-            //SqlDataAdapter kendisi connection acip kapatiyor. Yalnizca listelerken gecerli
+            //SqlDataAdapter kendisi connection acip kapatiyor. Yalnizca listelerken gecerli (Disconnected Arch.)
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select * from Categories", sqlConnection);
-            DataTable dataTable = new DataTable();
+            DataTable dataTable = new DataTable();  // Tek select sorgusu varsa (tek tablo) datatable isimizi gorur, join isleminde dataset kullanabiliriz. new DataSet();
             sqlDataAdapter.Fill(dataTable);
             categoriesDataGrid.DataSource = dataTable;
             categoriesDataGrid.Columns["CategoryId"].Visible = false;

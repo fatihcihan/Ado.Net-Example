@@ -37,6 +37,8 @@
             this.lblUnitsInStock = new System.Windows.Forms.Label();
             this.numUnitsInStock = new System.Windows.Forms.NumericUpDown();
             this.btnCategoryForm = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnitsInStock)).BeginInit();
@@ -51,6 +53,7 @@
             this.productsDataGrid.RowTemplate.Height = 24;
             this.productsDataGrid.Size = new System.Drawing.Size(1033, 269);
             this.productsDataGrid.TabIndex = 0;
+            this.productsDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDataGrid_CellContentClick);
             // 
             // lblProductName
             // 
@@ -63,7 +66,7 @@
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(149, 173);
+            this.btnAddProduct.Location = new System.Drawing.Point(350, 15);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(167, 39);
             this.btnAddProduct.TabIndex = 2;
@@ -112,7 +115,7 @@
             // 
             // btnCategoryForm
             // 
-            this.btnCategoryForm.Location = new System.Drawing.Point(553, 89);
+            this.btnCategoryForm.Location = new System.Drawing.Point(768, 26);
             this.btnCategoryForm.Name = "btnCategoryForm";
             this.btnCategoryForm.Size = new System.Drawing.Size(246, 53);
             this.btnCategoryForm.TabIndex = 8;
@@ -120,11 +123,33 @@
             this.btnCategoryForm.UseVisualStyleBackColor = true;
             this.btnCategoryForm.Click += new System.EventHandler(this.btnCategoryForm_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(350, 66);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(163, 39);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(350, 115);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(163, 39);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 574);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCategoryForm);
             this.Controls.Add(this.numUnitsInStock);
             this.Controls.Add(this.lblUnitsInStock);
@@ -156,6 +181,8 @@
         private System.Windows.Forms.Label lblUnitsInStock;
         private System.Windows.Forms.NumericUpDown numUnitsInStock;
         private System.Windows.Forms.Button btnCategoryForm;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
