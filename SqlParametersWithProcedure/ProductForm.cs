@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace SqlParametersWithProcedure
 {
-    public partial class Form1 : Form
+    public partial class ProductForm : Form
     {
 
         SqlConnection sqlConnection = new SqlConnection("Server=localhost;Database=Northwind;UID=sa;Password=1;");
 
-        public Form1()
+        public ProductForm()
         {
             InitializeComponent();
         }

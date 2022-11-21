@@ -1,6 +1,6 @@
 ﻿namespace SqlParametersWithProcedure
 {
-    partial class Form1
+    partial class ProductForm
     {
         /// <summary>
         /// Required designer variable.
